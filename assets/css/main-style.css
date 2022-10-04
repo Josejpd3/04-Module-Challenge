@@ -15,7 +15,8 @@ header a {
     color: var(--secondary);
 }
 
-main .container {
+main .main {
+    display: none;
     align-items: center;
     width: 518px;
     text-align: center;
