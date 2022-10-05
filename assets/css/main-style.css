@@ -15,24 +15,37 @@ header a {
     color: var(--secondary);
 }
 
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+main > * {
+    margin-top: 0px;
+}
+
 main .main {
     display: none;
     align-items: center;
     width: 518px;
     text-align: center;
     word-spacing: 2px;
+
 }
 
-.container > * {
+.main > * {
     margin-top: 20px;
 }
 
-.container h1 {
+.main h1 {
     font-size: 30px;
     font-weight: 600;
 }
 
-.container button {
+.main button {
     height: 35px;
     width: 100px;
     color: var(--white-txt);
@@ -41,7 +54,7 @@ main .main {
     border-radius: 5px;
 }
 
-.container button:hover {
+.main button:hover {
     background-color: var(--secondary);
     cursor: pointer;
 }
