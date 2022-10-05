@@ -67,7 +67,7 @@ html * {
 body {
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -81,6 +81,7 @@ header {
     height: 50px;
     font-size: 14px;
     background-color: var(--bg-color);
+    margin-bottom: 60px;
 }
 
 main {
@@ -89,7 +90,6 @@ main {
 }
 
 main .main {
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
