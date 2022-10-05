@@ -77,16 +77,18 @@ body {
 }
 
 header {
-    visibility: hidden;
+    visibility:hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    font-size: 14px;
     background-color: var(--bg-color);
+    font-size: 16px;
+    font-weight: 500;
     margin-bottom: 60px;
 }
+
 
 main {
     display: flex;
@@ -97,4 +99,25 @@ main .main {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.main > * {
+    margin-top: 20px;
+}
+
+.main h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.main button {
+    color: var(--white-txt);
+    background-color: var(--primary);
+    border: 0px;
+    border-radius: 5px;
+}
+
+.main button:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
 }

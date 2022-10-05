@@ -1,8 +1,5 @@
 header {
     visibility: visible;
-    background-color: var(--bg-color);
-    font-size: 16px;
-    font-weight: 500;
 }
 
 header > * {
