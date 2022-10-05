@@ -28,12 +28,10 @@ main > * {
 }
 
 main .main {
-    display: none;
     align-items: center;
     width: 518px;
     text-align: center;
     word-spacing: 2px;
-
 }
 
 .main > * {

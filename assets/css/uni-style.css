@@ -64,6 +64,10 @@ html * {
     --sub: #7b7b7c;
 }
 
+div.hide {
+    display: none;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -90,7 +94,6 @@ main {
 }
 
 main .main {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
