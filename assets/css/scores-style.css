@@ -1,14 +1,11 @@
 ol {
-    line-height: 1.5;
-    background-color: var(--highlight);
-    padding: 5px 300px 5px 25px;
-    list-style: decimal;
+  line-height: 1.5;
+  background-color: var(--highlight);
+  padding: 5px 300px 5px 25px;
+  list-style: decimal;
 }
 
-
-
-
 button {
-    height: 20px;
-    margin-right: 5px;
+  height: 20px;
+  margin-right: 5px;
 }

@@ -1,55 +1,55 @@
 header {
-    visibility: visible;
+  visibility: visible;
 }
 
 header > * {
-    margin-left: 30px;
-    margin-right: 40px;
+  margin-left: 30px;
+  margin-right: 40px;
 }
 
 header a {
-    text-decoration: none;
-    color: var(--secondary);
+  text-decoration: none;
+  color: var(--secondary);
 }
 
 main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
 }
 
 main > * {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 main .main {
-    align-items: center;
-    width: 518px;
-    text-align: center;
-    word-spacing: 2px;
+  align-items: center;
+  width: 518px;
+  text-align: center;
+  word-spacing: 2px;
 }
 
 .main > * {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .main h1 {
-    font-size: 30px;
-    font-weight: 600;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .main button {
-    height: 35px;
-    width: 100px;
-    color: var(--white-txt);
-    background-color: var(--primary);
-    border: 0px;
-    border-radius: 5px;
+  height: 35px;
+  width: 100px;
+  color: var(--white-txt);
+  background-color: var(--primary);
+  border: 0px;
+  border-radius: 5px;
 }
 
 .main button:hover {
-    background-color: var(--secondary);
-    cursor: pointer;
+  background-color: var(--secondary);
+  cursor: pointer;
 }
