@@ -15,11 +15,19 @@ let submitInitial = document.querySelector('#submit');
 
 
 // Main Screen
+function startQuiz() {
+    mainScreen.classList.add('hide')
+    questionScreen.classList.remove('hide')
+    console.log('hello')
+}
 
 
 
 
-
+startBtn.addEventListener("click", function(event) {
+    event.preventDefault()
+    startQuiz()
+})
 // Questions Screen
 
 
