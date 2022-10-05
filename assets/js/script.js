@@ -18,7 +18,6 @@ let submitInitial = document.querySelector('#submit');
 function startQuiz() {
     mainScreen.classList.add('hide')
     questionScreen.classList.remove('hide')
-    console.log('hello')
 }
 
 
