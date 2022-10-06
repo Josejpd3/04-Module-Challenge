@@ -178,3 +178,36 @@ function endQuiz() {
 
     scoreScreen.classList.remove("hide")
 }
+
+
+
+
+function saveHighscore() {
+    // get value of input box - for initials
+    let initials = document.getElementById('initials').value;
+    // format new score object for current user
+    let currentUserScore = {init: initials, score: time};
+    // get saved scores from localstorage, or if not any, set to empty array
+    let savedScores = JSON.parse(localStorage.getItem("savedScores"));
+        // make sure value wasn't empty
+    if(initials === ""){
+        alert ("You must enter your initials to save your score");
+    }
+    
+    else{
+        if (savedScores !== null) {
+            savedScores.push(currentUserScore);
+            // save to local storage
+            localStorage.setItem("savedScores",JSON.stringify(savedScores));
+        }
+        else{
+            savedScores = [currentUserScore];
+            localStorage.setItem("savedScores", JSON.stringify(savedScores));
+        }
+            // redirect to next page
+            document.location.href = "highscores.html";
+    }
+}
+
+
+document.querySelector("#submit").addEventListener("click", saveHighscore);
