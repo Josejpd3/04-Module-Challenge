@@ -87,3 +87,14 @@ main .main {
 .optionBtn:hover {
   background-color: var(--secondary);
 }
+
+
+.feedback {
+  width: 70%;
+  font-size: 4vh;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 2px solid var(--sub);
+  color: var(--sub);
+  font-style: italic;
+}
