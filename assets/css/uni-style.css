@@ -82,11 +82,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 6vh;
     background-color: var(--bg-color);
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 7vh;
 }
 
 

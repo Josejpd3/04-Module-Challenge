@@ -17,7 +17,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
+  height: 87vh;
 }
 
 main > * {
@@ -52,4 +52,38 @@ main .main {
 .main button:hover {
   background-color: var(--secondary);
   cursor: pointer;
+}
+
+/* Question Section */
+#questions-section {
+  width: 70%;
+}
+
+
+ #question-title {
+  font-size: 7vh;
+  margin-bottom: 10px;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+}
+
+.choices .optionBtn {
+  text-align: left;
+  margin-top: 10px;
+  width: 36vh;
+  height: 6vh;
+  color: var(--white-txt);
+  background-color: var(--primary);
+  border: 0px;
+  border-radius: 5px;
+  font-size: 3vh;
+}
+
+.optionBtn:hover {
+  background-color: var(--secondary);
 }

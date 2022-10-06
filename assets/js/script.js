@@ -80,7 +80,7 @@ function getQuestion() {
         let choices = document.createElement("button")
         choicesElement.append(choices)
         choices.classList.add("optionBtn")
-        choices.textContent = questions[questionNumber].choices[i]
+        choices.textContent = `${i + 1}. ${questions[questionNumber].choices[i]}`
     }
 
 
@@ -92,7 +92,7 @@ function getQuestion() {
 
 
 
-
+getQuestion()
 
 
 
