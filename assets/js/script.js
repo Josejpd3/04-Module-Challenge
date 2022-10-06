@@ -7,10 +7,11 @@ let timerElement = document.querySelector('.timer');
 let questionScreen = document.querySelector('#questions-section');
 let questionElement = document.querySelector('#question-title');
 let choicesElement = document.querySelector('#choices');
+let feedback = document.querySelector('#feedback');
 
 let questionNumber = 0;
 let currentQuestion;
-let time = 120; 
+let time = 75; 
 
 
 // Final Score Screen
@@ -18,6 +19,7 @@ let scoreScreen = document.querySelector('#end-screen');
 let finalScoreElement = document.querySelector('#final-score');
 let initialsInput = document.querySelector('#initials');
 let submitInitial = document.querySelector('#submit');
+let score;
 
 
 
@@ -26,7 +28,6 @@ let submitInitial = document.querySelector('#submit');
 function startQuiz() {
     mainScreen.classList.add('hide')
     questionScreen.classList.remove('hide')
-
 
     timer()
     getQuestion()
@@ -37,6 +38,7 @@ function startQuiz() {
 
 startBtn.addEventListener("click", function(event) {
     event.preventDefault()
+    event.stopPropagation()
     startQuiz()
 })
 
@@ -63,24 +65,39 @@ function timer() {
     let timer = setInterval(function() {
         timerElement.innerHTML = `Time: ${time}`;
         time--;
-        if (time < 0) {
+        if ((time < 0) || (questionNumber > 4)) {
+            score = time + 1;
             clearInterval(timer);
+            endQuiz()
         }
     }, 1000)
+
+
 }
 
 
 function getQuestion() {
 
+    let choices = "";
 
-    currentQuestion = questions[questionNumber].title
-    questionElement.textContent = currentQuestion
+    currentQuestion = questions[questionNumber]
+    questionElement.textContent = currentQuestion.title
 
-    for (let i = 0; i < questions[questionNumber].choices.length; i++) {
-        let choices = document.createElement("button")
+
+
+    for (let i = 0; i < currentQuestion.choices.length; i++) {
+        choices = document.createElement("button")
         choicesElement.append(choices)
         choices.classList.add("optionBtn")
-        choices.textContent = `${i + 1}. ${questions[questionNumber].choices[i]}`
+        choices.setAttribute('id', i)
+        choices.textContent = `${i + 1}. ${currentQuestion.choices[i]}`
+        
+        choices.addEventListener("click", (event) => {
+            event.preventDefault()
+            event.stopPropagation()
+            checkAnswer(i, currentQuestion.choices)
+        })
+
     }
 
 
@@ -92,10 +109,46 @@ function getQuestion() {
 
 
 
-getQuestion()
+function checkAnswer(i, choices) {
+    let givenChoice = choices[i];
+    let correctChoice = questions[questionNumber].answer;
 
 
 
+
+    if (givenChoice !== correctChoice) {
+        feedback.textContent = "Incorrect!";
+        feedback.classList.remove('hide');
+        time = time - 10;
+    } else {
+        feedback.textContent = "Correct!"
+        feedback.classList.remove('hide')
+    }
+
+    setTimeout(function() {
+        questionNumber++;
+        resetQuestion()
+    }, 1000);
+    
+    console.log(givenChoice)
+
+}
+
+
+
+
+function resetQuestion() {
+    while (choicesElement.firstChild) {
+        questionElement.textContent = "";
+        choicesElement.removeChild(choicesElement.firstChild);
+        feedback.classList.add('hide');
+    }
+    if (questionNumber <= 4) {
+        getQuestion()
+    } else {
+        endQuiz()
+    }
+}
 
 
 
@@ -111,3 +164,17 @@ getQuestion()
 
 
 // Final Score Screen
+
+
+function endQuiz() {
+
+    while (choicesElement.firstChild) {
+        questionElement.textContent = "";
+        choicesElement.removeChild(choicesElement.firstChild);
+        feedback.classList.add('hide');
+    }
+
+    finalScoreElement.textContent = score;
+
+    scoreScreen.classList.remove("hide")
+}
