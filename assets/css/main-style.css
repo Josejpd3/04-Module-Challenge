@@ -25,8 +25,9 @@ main > * {
 }
 
 main .main {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  width: 598px;
   text-align: center;
   word-spacing: 2px;
 }
