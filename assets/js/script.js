@@ -1,5 +1,5 @@
 // Main Screen
-let mainScreen = document.querySelector('.main');
+let mainScreen = document.querySelector('#main');
 let startBtn = document.querySelector('#btn-start');
 let timerElement = document.querySelector('.timer');
 
@@ -26,8 +26,8 @@ let score;
 
 // Main Screen
 function startQuiz() {
-    mainScreen.classList.add('hide')
-    questionScreen.classList.remove('hide')
+    mainScreen.classList.add('hide');
+    questionScreen.classList.remove('hide');
 
     timer()
     getQuestion()
