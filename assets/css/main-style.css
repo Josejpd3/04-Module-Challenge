@@ -30,6 +30,7 @@ main .main {
   align-items: center;
   text-align: center;
   word-spacing: 2px;
+  width: 600px;
 }
 
 .main > * {
