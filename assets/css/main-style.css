@@ -83,13 +83,13 @@ main .main {
 .choices .optionBtn {
   text-align: left;
   margin-top: 10px;
-  width: 200px;
+  width: 280px;
   height: 70%;
   color: var(--white-txt);
   background-color: var(--primary);
   border: 0px;
   border-radius: 5px;
-  font-size: 3vh;
+  font-size: 25px;
 }
 
 .optionBtn:hover {
