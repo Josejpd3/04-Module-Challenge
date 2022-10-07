@@ -105,6 +105,30 @@ main .main {
 }
 
 
+.end-screen h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+
+.end-screen > p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.end-screen input {
+  height: 20px;
+}
+
+.end-screen button {
+  margin-left: 10px;
+  width: 80px;
+  height: 25px;
+  background-color: var(--primary);
+  color: var(--white-txt);
+  border-radius: 3px;
+  border: 0px;
+}
 
 
 
